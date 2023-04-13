@@ -5,7 +5,7 @@ Simples Agenda de contatos para sistemas (Windows, Linux, MAC)
 ## Autor
 Vinicius Barbosa dos Santos
 
-## Instalação da versão de demonstração
+## Instalação projeto Agenda de contatos banco de dados
 essas intruções fornecerão uma cópia do projeto instalado e funcionando a sua maquina local. 
 ### pré-requisitos:
 É necessário ter instalado no computador:
