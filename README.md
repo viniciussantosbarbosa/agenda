@@ -14,3 +14,4 @@ essas intruções fornecerão uma cópia do projeto instalado e funcionando a su
 ### Instalação:
 * Execute o banco de dados MySQL (localhost) como root sem nenhuma senha definida (senha em branco)
 *Crie um novo banco de dados de nome dbagenda
+* Faça a importação do DUMP desse projeto (repositório) para o MySQL.
