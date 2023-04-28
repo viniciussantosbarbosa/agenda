@@ -55,7 +55,7 @@ public class Principal extends JFrame {
 	 * Create the frame.
 	 */
 	public Principal() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Principal.class.getResource("/img/moto.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Principal.class.getResource("/img/logo128.png")));
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowActivated(WindowEvent e) {
@@ -92,14 +92,14 @@ public class Principal extends JFrame {
 		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		
-		lblUsuario = new JLabel("New label");
+		lblUsuario = new JLabel("");
 		lblUsuario.setForeground(new Color(255, 255, 255));
 		lblUsuario.setBounds(71, 17, 132, 14);
 		panelRodape.add(lblUsuario);
 		
 		JLabel lblLogo = new JLabel("");
-		lblLogo.setIcon(new ImageIcon(Principal.class.getResource("/img/logo.png")));
-		lblLogo.setBounds(477, 236, 192, 148);
+		lblLogo.setIcon(new ImageIcon(Principal.class.getResource("/img/logo-2.jpg")));
+		lblLogo.setBounds(414, 179, 239, 262);
 		contentPane.add(lblLogo);
 		
 		btnUsuarios = new JButton("");
@@ -132,7 +132,7 @@ public class Principal extends JFrame {
 		btnSobre.setBorder(null);
 		btnSobre.setIcon(new ImageIcon(Principal.class.getResource("/img/about.png")));
 		btnSobre.setToolTipText("Sobre");
-		btnSobre.setBounds(560, 36, 48, 48);
+		btnSobre.setBounds(596, 23, 48, 48);
 		contentPane.add(btnSobre);
 		
 		

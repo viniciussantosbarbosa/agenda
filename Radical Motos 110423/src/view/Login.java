@@ -23,6 +23,7 @@ import javax.swing.border.EmptyBorder;
 
 import model.DAO;
 import util.Validador;
+import java.awt.Cursor;
 
 public class Login extends JFrame {
 	// instanciar objetos (JDBC)
@@ -40,6 +41,7 @@ public class Login extends JFrame {
 	private JTextField txtLogin;
 	private JLabel lblNewLabel_1;
 	private JPasswordField txtSenha;
+	private JButton btnNewButton;
 
 	/**
 	 * Launch the application.
@@ -67,7 +69,7 @@ public class Login extends JFrame {
 				status();
 			}
 		});
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/img/moto.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/img/logo128.png")));
 		setTitle("Radical Motos - Login");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -118,6 +120,13 @@ public class Login extends JFrame {
 		
         //vincular a tecla [enter] ao botão acessar
 		getRootPane().setDefaultButton(btnLogin);
+		
+		btnNewButton = new JButton("");
+		btnNewButton.setContentAreaFilled(false);
+		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+		btnNewButton.setIcon(new ImageIcon(Login.class.getResource("/img/carro.png")));
+		btnNewButton.setBounds(123, 34, 239, 143);
+		contentPane.add(btnNewButton);
 	}// fim do construtor
 
 	/**
@@ -162,7 +171,7 @@ public class Login extends JFrame {
 		} else {
 			// lógica principal
 			// tratamento de exceções
-			String read = "select * from usuarios where login=? and senha=?";
+			String read = "select * from usuarios where login=? and senha=md5(?)";
 			try {
 				// abrir conexão
 				con = dao.conectar();
